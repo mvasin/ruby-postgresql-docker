@@ -12,4 +12,5 @@ sudo -u postgres psql -c 'alter user root with createdb' postgres
 # Install gems
 bundle
 
-rackup -o 0.0.0.0
+# Seems to run CMD
+exec "$@"
