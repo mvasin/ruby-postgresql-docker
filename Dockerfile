@@ -7,6 +7,8 @@ RUN apt-get update \
 EXPOSE 9292
 COPY entrypoint.sh /usr/local/bin/
 RUN chmod +x /usr/local/bin/entrypoint.sh
+RUN mkdir /app
+WORKDIR /app
 ENTRYPOINT ["entrypoint.sh"]
 
 CMD ["sh"]
