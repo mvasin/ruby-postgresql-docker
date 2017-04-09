@@ -4,3 +4,9 @@ RUN apt-get update \
   && apt-get install sudo \
   && apt-get clean \
   && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
+EXPOSE 9292
+COPY entrypoint.sh /usr/local/bin/
+RUN chmod +x /usr/local/bin/entrypoint.sh
+ENTRYPOINT ["entrypoint.sh"]
+
+CMD ["sh"]
