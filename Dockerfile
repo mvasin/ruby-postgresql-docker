@@ -11,4 +11,4 @@ RUN mkdir /app
 WORKDIR /app
 EXPOSE 9292
 ENTRYPOINT ["entrypoint.sh"]
-CMD ["rackup, "-o", "0.0.0.0"]
+CMD ["rackup", "-o", "0.0.0.0"]
